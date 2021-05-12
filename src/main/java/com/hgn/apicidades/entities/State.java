@@ -1,12 +1,12 @@
 package com.hgn.apicidades.entities;
 
-import com.vladmihalcea.hibernate.type.json.JsonBinaryType;
-import org.hibernate.annotations.Type;
-import org.hibernate.annotations.TypeDef;
-import org.hibernate.annotations.TypeDefs;
+import com.vladmihalcea.hibernate.type.json.*;
+import org.hibernate.annotations.*;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import javax.persistence.*;
-import java.util.List;
+import java.util.*;
 
 @Entity(name = "State")
 @Table(name = "estado")
@@ -21,9 +21,6 @@ public class State {
   private String uf;
 
   private Integer ibge;
-
-//  @Column(name = "pais")
-//  private Integer countryId;
 
   @ManyToOne
   @JoinColumn(name = "pais", referencedColumnName = "id")
@@ -59,8 +56,4 @@ public class State {
   public Country getCountry() {
     return country;
   }
-
-  //  public Integer getCountryId() {
-  //    return countryId;
-  //  }
 }

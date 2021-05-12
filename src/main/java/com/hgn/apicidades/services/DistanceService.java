@@ -8,7 +8,6 @@ import org.springframework.stereotype.*;
 
 import java.util.*;
 
-
 @Service
 public class DistanceService {
 

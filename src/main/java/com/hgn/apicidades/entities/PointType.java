@@ -1,15 +1,13 @@
 package com.hgn.apicidades.entities;
 
-import org.hibernate.HibernateException;
-import org.hibernate.engine.spi.SharedSessionContractImplementor;
-import org.hibernate.usertype.UserType;
-import org.postgresql.geometric.PGpoint;
-import org.springframework.data.geo.Point;
+import org.hibernate.*;
+import org.hibernate.engine.spi.*;
+import org.hibernate.usertype.*;
+import org.postgresql.geometric.*;
+import org.springframework.data.geo.*;
 
-import java.io.Serializable;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.io.*;
+import java.sql.*;
 
 public class PointType implements UserType {
 
