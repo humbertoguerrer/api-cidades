@@ -1,5 +1,6 @@
 package com.hgn.apicidades.entities;
 
+import com.vladmihalcea.hibernate.type.json.JsonBinaryType;
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
 import org.hibernate.annotations.TypeDefs;
@@ -12,8 +13,7 @@ import java.util.List;
 @TypeDefs({@TypeDef(name = "jsonb", typeClass = JsonBinaryType.class)})
 public class State {
 
-  @Id
-  private Long id;
+  @Id private Long id;
 
   @Column(name = "nome")
   private String name;
@@ -22,8 +22,8 @@ public class State {
 
   private Integer ibge;
 
-  @Column(name = "pais")
-  private Integer countryId;
+//  @Column(name = "pais")
+//  private Integer countryId;
 
   @ManyToOne
   @JoinColumn(name = "pais", referencedColumnName = "id")
@@ -60,7 +60,7 @@ public class State {
     return country;
   }
 
-  /*public Integer getCountryId() {
-      return countryId;
-  }*/
+  //  public Integer getCountryId() {
+  //    return countryId;
+  //  }
 }

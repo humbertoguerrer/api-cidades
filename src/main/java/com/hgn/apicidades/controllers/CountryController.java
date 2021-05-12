@@ -15,7 +15,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/countries")
-public class PaisController {
+public class CountryController {
 
   @Autowired private CountryRepository repository;
 
